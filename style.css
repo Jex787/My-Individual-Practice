@@ -1,0 +1,49 @@
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    margin-bottom: 3rem;
+}
+
+.mask-container {
+    position: relative;
+}
+
+.color-image {
+    position: absolute;
+    inset: 0;
+    background-image: url("images/color.jpg");
+    background-size: cover;
+    /*  */
+    -webkit-mask-image: url("images/inkmask.png");
+    -webkit-mask-size: cover;
+    -webkit-mask-position: 0% 0%;
+    /*  */
+    mask-image: url("images/inkmask.png");
+    mask-size: cover;
+    mask-position: 0% 0%;
+
+    transition:
+        -webkit-mask-position;
+
+}
+
+.mask-animation {
+    animation:
+        addColor 1000ms steps(32) forwards;
+}
+
+@keyframes addColor {
+    0% {
+        -webkit-mask-position: 100% 0%;
+        mask-position: 100% 0%;
+    }
+
+    100% {
+        -webkit-mask-position: 0% 0%;
+        mask-position: 0% 0%;
+    }
+}
