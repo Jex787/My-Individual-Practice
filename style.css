@@ -21,7 +21,7 @@ button {
     -webkit-mask-image: url("images/inkmask.png");
     -webkit-mask-size: cover;
     -webkit-mask-position: 0% 0%;
-    /*  */
+    /* non-chromiam */
     mask-image: url("images/inkmask.png");
     mask-size: cover;
     mask-position: 0% 0%;
